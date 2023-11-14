@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "langchain-in-y-seconds"
+version = "0.1.0"
+description = ""
+authors = ["Cutwell"]
+readme = "README.md"
+packages = [{include = "langchain_in_y_seconds"}]
+
+[tool.poetry.dependencies]
+python = "3.11.6"
+langchain-cli = "^0.0.16"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
