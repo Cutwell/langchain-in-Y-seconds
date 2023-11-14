@@ -108,7 +108,7 @@ poetry run python -m pytest -s .
 You've completed this tutorial and now have a complete LangChain project. If you need more help with navigating the LangSmith interface, go view the video version of this tutorial [on Youtube](https://youtu.be/AkYYYNjzGcA).
 
 ### Extra step for running PyTest multiple times
-If you re-run your PyTest, you'll notice it fails the 2nd time round - this is because the `run_on_dataset` `project_name` parameter must be unqiue each time.
+If you re-run your PyTest, you'll notice it fails the 2nd time round - this is because the `run_on_dataset` `project_name` parameter must be unique each time.
 The easiest way to fix this is to use a timestamp, like so:
 
 ```python
