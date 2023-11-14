@@ -1,4 +1,4 @@
-# <img src="https://raw.githubusercontent.com/Cutwell/langchain-in-Y-seconds/main/langchain-in-Y-seconds.png" style="width:128px;padding-right:20px;margin-bottom:-8px;">Learn LangChain in Y seconds
+# <img src="https://raw.githubusercontent.com/Cutwell/langchain-in-Y-seconds/main/langchain-in-y-seconds.png" style="width:128px;padding-right:20px;margin-bottom:-8px;">Learn LangChain in Y seconds
  Learn the entire LangChain tech-stack fast 🏃‍♀️
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
