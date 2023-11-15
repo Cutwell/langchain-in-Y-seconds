@@ -79,39 +79,6 @@ chain_results = client.run_on_dataset(
 9. Create a new PyTest file `test_chain.py` in `api/packages/pirate-speak/tests/`:
 
 ```python
-from pirate_speak.chain import chain
-import langsmith
-
-def test_chain():
-	client = langsmith.Client()
-	chain_results = client.run_on_dataset(
-		dataset_name="quickstart-dataset",
-		llm_or_chain_factory=chain,
-		project_name="test-formal-project-4",
-		concurrency_level=5,
-		verbose=True,
-	)
-```
-
-10. Open a terminal in `/api` and run these commands:
-
-```bash
-poetry add pytest --group=dev
-poetry run python -m pytest -s .
-```
-
-11. View your dataset test runs, and add the trace to a new annotation queue.
-
-12. View your annotation queue and explore the review interface.
-
-🎉🎉 **Congratulations!** 🎉🎉
-You've completed this tutorial and now have a complete LangChain project. If you need more help with navigating the LangSmith interface, go view the video version of this tutorial [on Youtube](https://youtu.be/AkYYYNjzGcA).
-
-### Extra step for running PyTest multiple times
-If you re-run your PyTest, you'll notice it fails the 2nd time round - this is because the `run_on_dataset` `project_name` parameter must be unique each time.
-The easiest way to fix this is to use a timestamp, like so:
-
-```python
 from pirate_assistant.chain import chain
 import langsmith
 from datetime import datetime # import datetime module to get a timestamp
@@ -127,6 +94,22 @@ def test_chain():
 		verbose=True,
 	)
 ```
+
+_To enable PyTest re-runs, we want to use a timestamped unique project name to store each successive test result._
+
+10. Open a terminal in `/api` and run these commands:
+
+```bash
+poetry add pytest --group=dev
+poetry run python -m pytest -s .
+```
+
+11. View your dataset test runs, and add the trace to a new annotation queue.
+
+12. View your annotation queue and explore the review interface.
+
+🎉🎉 **Congratulations!** 🎉🎉
+You've completed this tutorial and now have a complete LangChain project. If you need more help with navigating the LangSmith interface, go view the video version of this tutorial [on Youtube](https://youtu.be/AkYYYNjzGcA).
 
 ## License
 
