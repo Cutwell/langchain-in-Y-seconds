@@ -109,7 +109,7 @@ poetry run python -m pytest -s .
 12. View your annotation queue and explore the review interface.
 
 🎉🎉 **Congratulations!** 🎉🎉
-You've completed this tutorial and now have a complete LangChain project. If you need more help with navigating the LangSmith interface, go view the video version of this tutorial [on Youtube](https://youtu.be/AkYYYNjzGcA).
+You've completed this tutorial and now have a complete LangChain project. If you need more help with navigating the LangSmith interface, go view the video version of this tutorial [on Youtube](https://youtu.be/M0Uyd5qAry0).
 
 ## License
 
