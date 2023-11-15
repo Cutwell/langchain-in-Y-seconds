@@ -107,6 +107,27 @@ poetry run python -m pytest -s .
 🎉🎉 **Congratulations!** 🎉🎉
 You've completed this tutorial and now have a complete LangChain project. If you need more help with navigating the LangSmith interface, go view the video version of this tutorial [on Youtube](https://youtu.be/AkYYYNjzGcA).
 
+### Extra step for running PyTest multiple times
+If you re-run your PyTest, you'll notice it fails the 2nd time round - this is because the `run_on_dataset` `project_name` parameter must be unique each time.
+The easiest way to fix this is to use a timestamp, like so:
+
+```python
+from pirate_assistant.chain import chain
+import langsmith
+from datetime import datetime # import datetime module to get a timestamp
+
+def test_chain():
+	client = langsmith.Client()
+
+	chain_results = client.run_on_dataset(
+		dataset_name="quickstart-dataset",
+		llm_or_chain_factory=chain,
+		project_name=f"quickstart-dataset-test-{int(datetime.now().strftime('%Y%m%d%H%M%S'))}", # use a timestamped unique project name each re-run
+		concurrency_level=5,
+		verbose=True,
+	)
+```
+
 ## License
 
 MIT
